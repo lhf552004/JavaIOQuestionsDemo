@@ -1,6 +1,7 @@
 # Introduction 
 这是一个Java IO 面试题 + 代码演示
 
+主要专注于IO
 # What is the difference between IO and NIO?
 Main difference between NIO and IO is that NIO provides asynchronous, non blocking IO, which is critical to write faster and scalable networking systems. 
 
@@ -38,7 +39,7 @@ see Demo 3
 [![An old rock in the desert](http://4.bp.blogspot.com/-bEr367SmsGc/TzjoGW_fKNI/AAAAAAAAAKY/f9beQFkAdmc/s1600/reader+and+writer+class+in+java.jpg "Class diagram")](http://javadevwannabe.blogspot.com/2012/02/reader-and-writer-classes.html)
 
 # Writer类 层次结构
-![Writer diagram]("/src/main/resources/WriterDiagram.JPG")
+![Writer diagram]("src/main/resources/WriterDiagram.JPG")
 
 # BufferedReader and FileReader 区别
 BufferedReader is a Decorator that provides buffering for faster IO, while FileReader is used to read data from File.
