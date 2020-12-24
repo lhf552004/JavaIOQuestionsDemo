@@ -39,7 +39,7 @@ see Demo 3
 [![An old rock in the desert](http://4.bp.blogspot.com/-bEr367SmsGc/TzjoGW_fKNI/AAAAAAAAAKY/f9beQFkAdmc/s1600/reader+and+writer+class+in+java.jpg "Class diagram")](http://javadevwannabe.blogspot.com/2012/02/reader-and-writer-classes.html)
 
 # Writer类 层次结构
-![Writer diagram]("src/main/resources/WriterDiagram.JPG")
+![Writer diagram](src/main/resources/WriterDiagram.JPG)
 
 # BufferedReader and FileReader 区别
 BufferedReader is a Decorator that provides buffering for faster IO, while FileReader is used to read data from File.
