@@ -23,7 +23,9 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 
 public class Main {
-    public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException, ClassNotFoundException {
+    private static final String OUTPUT_FILE = "src/main/resources/output.txt";
+
+	public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException, ClassNotFoundException {
         // TODO Auto-generated method stub
         // Start Demo 1-Create folder-------------------
 //        boolean success = false;
@@ -226,7 +228,35 @@ public class Main {
 //        System.out.println("String read from RandomAccessFile in Java : " + fromFile);
         // End Demo 15-------------------------------------------------------------------
 
-
+    	// Start Demo 16 Callable --------------------------------
+    	Country c = new Country();
+        c.setCode(374);
+        c.setName("Armenia");
+       
+        FileOutputStream fileOutputStream
+         = new FileOutputStream(OUTPUT_FILE);
+        ObjectOutputStream objectOutputStream
+         = new ObjectOutputStream(fileOutputStream);
+        c.writeExternal(objectOutputStream);
+       
+        objectOutputStream.flush();
+        objectOutputStream.close();
+        fileOutputStream.close();
+       
+        FileInputStream fileInputStream
+         = new FileInputStream(OUTPUT_FILE);
+        ObjectInputStream objectInputStream
+         = new ObjectInputStream(fileInputStream);
+       
+        Country c2 = new Country();
+        c2.readExternal(objectInputStream);
+       
+        objectInputStream.close();
+        fileInputStream.close();
+       
+        System.out.println("Read Country code from file " + c2.getCode());
+        System.out.println("Read Country name from file " + c2.getName());
+    	// End Demo 16 -------------------------------------------
 
     }
 

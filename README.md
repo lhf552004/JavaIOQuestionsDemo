@@ -137,6 +137,8 @@ RandomAccessFile它允许对文件中的任何位置进行非顺序或随机访问。这意味着如果您想读
 # Serializable 和 Externalizable 区别
 最大的区别在于Externalizable可以override读和写的方法，使用自己的input和output
 
+See Demo 16
+
 而Serializable相当于一个标志一样，它没有任何方法需要实现
 
 [参考](https://howtodoinjava.com/java/serialization/externalizable-vs-serializable/)
