@@ -137,6 +137,17 @@ RandomAccessFile它允许对文件中的任何位置进行非顺序或随机访问。这意味着如果您想读
 # Serializable 和 Externalizable 区别
 最大的区别在于Externalizable可以override读和写的方法，使用自己的input和output
 
+
+ObjectOutputStream extends OutputStream implements ObjectOutput, ObjectStreamConstants
+
+而Externalizable的方法writeExternal要求ObjectOutput对象的参数，所以可以用ObjectOutputStream作为写数据的对象
+
+public void writeExternal(ObjectOutput out)
+
+相应的读也是如此：
+
+ObjectInputStream extends InputStream implements ObjectInput, ObjectStreamConstants
+	
 See Demo 16
 
 而Serializable相当于一个标志一样，它没有任何方法需要实现
